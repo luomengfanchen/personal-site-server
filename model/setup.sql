@@ -3,11 +3,11 @@ CREATE DATABASE ps_db;
 
 -- 用户表
 CREATE TABLE user_t(
-    id       SERIAL PRIMARY KEY,
-    name     VARCHAR(64),
-    email    VARCHAR(64),
+    id       SERIAL       PRIMARY KEY,
+    name     VARCHAR(64)  UNIQUE,
+    email    VARCHAR(64)  UNIQUE,
     password VARCHAR(256),
-    token    VARCHAR(64)
+    token    VARCHAR(64)  UNIQUE
 );
 
 -- 文章表

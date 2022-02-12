@@ -25,7 +25,7 @@ func UserLogin(c *gin.Context) {
 		// 返回toekn
 	} else {
 		c.JSON(http.StatusOK, gin.H{
-			"token": user.Token,
+			"data": user.Token,
 		})
 	}
 }
